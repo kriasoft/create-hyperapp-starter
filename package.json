@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "hyperapp-create",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create Hyperapp with no build configuration",
   "repository": "frenzzy/hyperapp-create",
   "author": "Vladimir Kutepov",
@@ -14,7 +14,7 @@
     "boilerplate"
   ],
   "engines": {
-    "node": ">=8"
+    "node": ">=8.3"
   },
   "bin": {
     "hyperapp-create": "./src/index.js"

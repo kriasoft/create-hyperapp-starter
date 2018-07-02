@@ -311,7 +311,8 @@ async function create({ dest, user, repo, ref }) {
       args.push('--offline')
     }
 
-    const child = cp.spawn(command, args, {
+    const exec = process.platform === 'win32' ? `${command}.cmd` : command
+    const child = cp.spawn(exec, args, {
       cwd: appPath,
       stdio: 'inherit',
     })
@@ -344,7 +345,7 @@ async function create({ dest, user, repo, ref }) {
       if (hasBuild) {
         process.stdout.write(
           `  ${colors.cyan(pkgManager.name)} ${colors.cyan(
-            pkgManager.name === 'npm' ? 'run build' : 'build',
+            pkgManager.name === 'yarn' ? 'build' : 'run build',
           )}\n    Optimizes the app for production.\n\n`,
         )
       }
@@ -361,7 +362,8 @@ async function create({ dest, user, repo, ref }) {
       process.stdout.write('We suggest that you begin by typing:\n\n')
 
       if (appPath !== process.cwd()) {
-        process.stdout.write(`  ${colors.cyan('cd')} ${JSON.stringify(dest)}\n`)
+        const dir = /^[a-zA-Z0-9_-]+$/.test(dest) ? dest : JSON.stringify(dest)
+        process.stdout.write(`  ${colors.cyan('cd')} ${dir}\n`)
       }
 
       process.stdout.write(`  ${colors.cyan(pkgManager.name)} ${colors.cyan('start')}\n\n`)

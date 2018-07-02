@@ -60,7 +60,7 @@ async function build() {
 
   // Compile source code into a distributable format with Babel
   await transformFile('src/index.js', 'dist/index.js', { node: '0.1' })
-  await transformFile('src/create.js', 'dist/create.js', { node: '8' })
+  await transformFile('src/create.js', 'dist/create.js', { node: '8.3' })
 
   // Create package.json for npm publishing
   const libPkg = { ...pkg }
