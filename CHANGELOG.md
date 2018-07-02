@@ -14,4 +14,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 * Initial public release.
 
 [unreleased]: https://github.com/frenzzy/hyperapp-create/compare/v1.0.1...HEAD
-[1.0.1]: https://github.com/kriasoft/universal-router/compare/v1.0.0...v1.0.1
+[1.0.1]: https://github.com/frenzzy/hyperapp-create/compare/v1.0.0...v1.0.1

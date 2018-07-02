@@ -311,8 +311,8 @@ async function create({ dest, user, repo, ref }) {
       args.push('--offline')
     }
 
-    const exec = process.platform === 'win32' ? `${command}.cmd` : command
-    const child = cp.spawn(exec, args, {
+    const cmd = process.platform === 'win32' ? `${command}.cmd` : command
+    const child = cp.spawn(cmd, args, {
       cwd: appPath,
       stdio: 'inherit',
     })
