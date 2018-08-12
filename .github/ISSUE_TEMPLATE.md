@@ -14,7 +14,7 @@
 
 * Please **do not** open issues or pull requests regarding the code in
   [`Node Stream Zip`](https://github.com/antelle/node-stream-zip) or
-  [`Hyperapp Starter`](https://github.com/frenzzy/hyperapp-starter)
+  [`Hyperapp Starter`](https://github.com/kriasoft/hyperapp-starter)
   (open them in their respective repositories).
 
 ## Bug reports

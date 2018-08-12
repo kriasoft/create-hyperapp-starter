@@ -18,16 +18,6 @@ function transformFile(src, dist, targets) {
         comments: false,
         compact: true,
         presets: [['@babel/preset-env', { targets, useBuiltIns: 'entry', loose: true }]],
-        plugins: [
-          [
-            'module-resolver',
-            {
-              resolvePath(sourcePath) {
-                return sourcePath === '../package.json' ? './package.json' : sourcePath
-              },
-            },
-          ],
-        ],
       },
       async (error, result) => {
         if (error) {
@@ -59,15 +49,14 @@ async function build() {
   ])
 
   // Compile source code into a distributable format with Babel
-  await transformFile('src/index.js', 'dist/index.js', { node: '0.1' })
-  await transformFile('src/create.js', 'dist/create.js', { node: '8.3' })
+  await transformFile('index.js', 'dist/index.js', { node: '0.1' })
+  await transformFile('create.js', 'dist/create.js', { node: '8.3' })
 
   // Create package.json for npm publishing
   const libPkg = { ...pkg }
   delete libPkg.private
   delete libPkg.devDependencies
   delete libPkg.scripts
-  libPkg.bin['hyperapp-create'] = './index.js'
   await fs.outputJson('dist/package.json', libPkg, { spaces: 2 })
 }
 

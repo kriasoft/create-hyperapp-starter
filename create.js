@@ -4,7 +4,7 @@ const path = require('path')
 const https = require('https')
 const cp = require('child_process')
 const StreamZip = require('node-stream-zip')
-const packageJson = require('../package.json')
+const packageJson = require('./package.json')
 
 const isInteractive = process.stdout.isTTY
 const colors = {

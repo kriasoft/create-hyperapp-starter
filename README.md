@@ -1,10 +1,10 @@
-# <img height="24" src="https://cdn.rawgit.com/frenzzy/hyperapp-create/master/logo.svg"> Hyperapp Create
+# <img height="24" src="https://cdn.rawgit.com/kriasoft/create-hyperapp-starter/master/logo.svg"> Create Hyperapp Starter
 
-[![npm version](https://img.shields.io/npm/v/hyperapp-create.svg)](https://www.npmjs.com/package/hyperapp-create)
-[![npm downloads](https://img.shields.io/npm/dw/hyperapp-create.svg)](https://www.npmjs.com/package/hyperapp-create)
+[![npm version](https://img.shields.io/npm/v/create-hyperapp-starter.svg)](https://www.npmjs.com/package/create-hyperapp-starter)
+[![npm downloads](https://img.shields.io/npm/dw/create-hyperapp-starter.svg)](https://www.npmjs.com/package/create-hyperapp-starter)
 [![slack chat](https://hyperappjs.herokuapp.com/badge.svg)](https://hyperappjs.herokuapp.com "Join us")
 
-The easiest way to start a new web application using [Hyperapp](https://hyperapp.js.org/).
+The easiest way to start a new [Hyperapp Starter](https://github.com/kriasoft/hyperapp-starter) project.
 
 ## Prerequisites
 
@@ -16,15 +16,14 @@ The easiest way to start a new web application using [Hyperapp](https://hyperapp
 To create a new app, run a single command:
 
 ```bash
-npx hyperapp-create my-app
+npm init hyperapp-starter
 ```
 
-It will create a directory called `my-app` inside the current folder.
-Inside that directory, it will generate the initial project structure
-based on [`Hyperapp Starter`](https://github.com/frenzzy/hyperapp-starter)
-and install the dependencies.
+It will generate the initial project structure
+based on [`Hyperapp Starter`](https://github.com/kriasoft/hyperapp-starter)
+inside the current directory and install the dependencies.
 
 ## License
 
-Hyperapp Create is MIT licensed.
-See [LICENSE](https://github.com/frenzzy/hyperapp-create/blob/master/LICENSE.md).
+Create Hyperapp Starter is MIT licensed.
+See [LICENSE](https://github.com/kriasoft/create-hyperapp-starter/blob/master/LICENSE.md).

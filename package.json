@@ -1,9 +1,9 @@
 {
   "private": true,
-  "name": "hyperapp-create",
-  "version": "1.0.1",
-  "description": "Create Hyperapp with no build configuration",
-  "repository": "frenzzy/hyperapp-create",
+  "name": "create-hyperapp-starter",
+  "version": "1.0.2",
+  "description": "The easiest way to start a new Hyperapp Starter project",
+  "repository": "kriasoft/create-hyperapp-starter",
   "author": "Vladimir Kutepov",
   "license": "MIT",
   "keywords": [
@@ -17,27 +17,26 @@
     "node": ">=8.3"
   },
   "bin": {
-    "hyperapp-create": "./src/index.js"
+    "create-hyperapp-starter": "./index.js"
   },
   "main": "create.js",
   "dependencies": {
     "node-stream-zip": "^1.7.0"
   },
   "devDependencies": {
-    "@babel/core": "7.0.0-beta.51",
-    "@babel/preset-env": "7.0.0-beta.51",
-    "babel-plugin-module-resolver": "^3.1.1",
+    "@babel/core": "7.0.0-rc.1",
+    "@babel/preset-env": "7.0.0-rc.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-prettier": "^2.6.1",
-    "fs-extra": "^6.0.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "fs-extra": "^7.0.0",
     "husky": "^0.14.3",
-    "prettier": "^1.13.7"
+    "prettier": "^1.14.2"
   },
   "scripts": {
-    "lint": "eslint src test tools",
+    "lint": "eslint index.js create.js test tools",
     "build": "node tools/build",
     "precommit": "node tools/precommit"
   }
